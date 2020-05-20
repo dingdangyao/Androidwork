@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.itcast.cn.shopping">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".firstActivity" />
+        <activity android:name=".secondActivity" />
+        <activity android:name=".thirdActivity" />
+        <activity android:name=".fourthActivity" />
+        <activity android:name=".firstfirstActivity" />
+        <activity android:name=".firstsecondActivity" />
+        <activity android:name=".firstthirdActivity" />
+        <activity android:name=".firstfourthActivity" />
+        <activity android:name=".firstActivity$firstfifthActivity" />
+        <activity android:name=".firstsixthActivity" />
+        <activity android:name=".secondfirstActivity" />
+        <activity android:name=".secondsecondActivity" />
+        <activity android:name=".secondthirdActivity" />
+        <activity android:name=".secondfourthActivity" />
+        <activity android:name=".secondfifthActivity" />
+        <activity android:name=".secondsixthActivity" />
+        <activity android:name=".firstfifthActivity" />
+        <activity android:name=".thirdfirstActivity" />
+        <activity android:name=".thirdsecondActivity" />
+        <activity android:name=".thirdthirdActivity" />
+        <activity android:name=".thirdfourthActivity" />
+        <activity android:name=".thirdfifthActivity" />
+        <activity android:name=".thirdsixthActivity"></activity>
+    </application>
+
+</manifest>

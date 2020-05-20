@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/containerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+    <!--父容器-->
+    <com.itcast.cn.shopping.ScrollViewContainer
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom"
+        android:layout_below="@+id/lintonei"
+        android:layout_marginBottom="-27dp">
+
+        <!--商品详情-->
+        <ScrollView
+            android:id="@+id/mymyscrollview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#ffffff"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/layout_product"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/detial_product_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="320dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="0dp"
+                        android:background="@mipmap/ic_launcher_round"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@mipmap/product_cloth_detail9" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#f3f2f8" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="127dp"
+                    android:background="#ffffff">
+
+                    <RelativeLayout
+                        android:id="@+id/layout_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/detial_product_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="17dp"
+                            android:ellipsize="end"
+                            android:lines="2"
+                            android:maxLines="2"
+                            android:text="女装/情侣装 (UT) Basquiat 印花T恤(短袖) 427014 优衣库UNIQLO"
+                            android:textColor="#262626"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:id="@+id/detial_product_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/detial_product_name"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="6dp"
+                            android:text="已售1万+件"
+                            android:textColor="#999999"
+                            android:textSize="12dp" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginRight="17dp">
+
+                            <TextView
+                                android:id="@+id/textjrgwc"
+                                android:layout_width="105dp"
+                                android:layout_height="33dp"
+                                android:background="@color/colorPrimary"
+                                android:gravity="center"
+                                android:text="加入购物车"
+                                android:textColor="#ffffff"
+                                android:textSize="14dp"
+                                android:visibility="gone" />
+
+                            <LinearLayout
+                                android:id="@+id/linearjjgwc"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageButton
+                                    android:id="@+id/tvMinus"
+                                    android:layout_width="45dp"
+                                    android:layout_height="45dp"
+                                    android:background="@android:color/transparent"
+                                    android:clickable="true"
+                                    android:gravity="center"
+                                    android:src="@mipmap/add" />
+
+                                <TextView
+                                    android:id="@+id/count"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginBottom="3dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:gravity="center"
+                                    android:text="0"
+                                    android:textColor="#1a1a1a"
+                                    android:textSize="18dp" />
+
+                                <ImageButton
+                                    android:id="@+id/tvAdd"
+                                    android:layout_width="45dp"
+                                    android:layout_height="45dp"
+                                    android:layout_marginBottom="7dp"
+                                    android:background="@android:color/transparent"
+                                    android:clickable="true"
+                                    android:gravity="center"
+                                    android:src="@mipmap/like" />
+                            </LinearLayout>
+                        </RelativeLayout>
+
+
+                        <TextView
+                            android:id="@+id/detial_product_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/detial_product_num"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="15dp"
+                            android:text="¥99.9"
+                            android:textColor="#f33637"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textyuanjia"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/detial_product_num"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="19dp"
+                            android:layout_toRightOf="@+id/detial_product_price"
+                            android:text="原价:"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:id="@+id/zhejia"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/detial_product_num"
+                            android:layout_marginStart="-1dp"
+                            android:layout_marginLeft="-1dp"
+                            android:layout_marginTop="19dp"
+                            android:layout_toEndOf="@+id/textyuanjia"
+                            android:layout_toRightOf="@+id/textyuanjia"
+                            android:text="¥99.00"
+                            android:textSize="12dp" />
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#d9d9d9" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/textspgg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="16dp"
+                        android:textColor="#676767"
+                        android:textSize="14dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/textname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="21dp"
+                        android:textColor="#262626"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/textdz"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textname"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="12dp"
+                        android:maxLength="20"
+                        android:textColor="#989898"
+                        android:textSize="13dp" />
+
+                    <RelativeLayout
+                        android:id="@+id/relativedh"
+                        android:layout_width="64dp"
+                        android:layout_height="37dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/textname">
+
+                        <TextView
+                            android:layout_width="1dp"
+                            android:layout_height="fill_parent"
+                            android:background="#d8d8d8" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/ic_launcher_round" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/imagdw"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textdz"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="11dp"
+                        android:src="@mipmap/ic_launcher_round" />
+
+                    <TextView
+                        android:id="@+id/textmishu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textdz"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_toRightOf="@+id/imagdw"
+                        android:textColor="#999999"
+                        android:textSize="13dp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="9dp"
+                    android:background="#f2f2f2" />
+
+                <RelativeLayout
+                    android:id="@+id/linearpl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:text="商品评价"
+                        android:textColor="#303030"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/textsong_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:layout_toLeftOf="@+id/xiangyou2_id"
+                        android:text="全部评价"
+                        android:textColor="#999999"
+                        android:textSize="12dp" />
+
+                    <ImageView
+                        android:id="@+id/xiangyou2_id"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="13dp"
+                        app:srcCompat="@mipmap/comment" />
+
+                    <Button
+                        android:id="@+id/chakangengduo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:background="@color/colorPrimaryDark"
+                        android:text="查看全部评价"
+                        android:textColor="#CDCDCD"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="9dp"
+                    android:background="#f2f2f2" />
+
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:text="商品详情"
+                        android:textColor="#303030"
+                        android:textSize="15dp" />
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="13dp"
+                        app:srcCompat="@mipmap/detail" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#d9d9d9" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="90dp"
+                    android:background="#ffffff">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center_horizontal"
+                        android:text="上滑查看图文详情"
+                        android:textColor="#989898"
+                        android:textSize="14dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+        <!--图文详情-->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="-50dp"
+            android:background="#f78ddd">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/clothdetail8"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/product_cloth_detail8"/>
+
+                <ImageView
+                    android:id="@+id/clothdetail10"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/product_cloth_detail10"/>
+
+                <ImageView
+                    android:id="@+id/clothdetail11"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/product_cloth_detail11"/>
+
+
+            </LinearLayout>
+        </ScrollView>
+    </com.itcast.cn.shopping.ScrollViewContainer>
+
+
+    <!--标题栏-->
+    <LinearLayout
+        android:id="@+id/lintonei"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/title_layout_product"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="#fff">
+
+            <ImageView
+                android:id="@+id/iv_title_left"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:padding="3dp"
+                app:srcCompat="@mipmap/detail" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="商品详情"
+                android:textColor="@color/colorAccent"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#d9d9d9" />
+    </LinearLayout>
+    <!--底部购物车-->
+    <RelativeLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#3b3b38"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvCost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="89dp"
+            android:text="￥ 0.0"
+            android:textColor="#fff"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/tvSubmit"
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="#4a4a47"
+            android:gravity="center"
+            android:text="去结算"
+            android:textColor="#fff"
+            android:textSize="16dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative_gwc"
+        android:layout_width="89dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp">
+
+        <ImageView
+            android:id="@+id/imgCart"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/shoppingcar"
+
+            app:srcCompat="?attr/actionBarItemBackground" />
+
+        <TextView
+            android:id="@+id/tvount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="13dp"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="#fff"
+            android:textSize="12sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>
